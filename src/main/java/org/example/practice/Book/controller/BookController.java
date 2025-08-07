@@ -30,7 +30,7 @@ public class BookController {
 
     @GetMapping("/read")
     public ResponseEntity<BookDto.BookRes> read(Integer id) {
-        BookDto.BookRes response = BookService.read(id);
+        BookDto.BookRes response = bookService.read(id);
 
         return ResponseEntity.status(200).body(response);
     }
