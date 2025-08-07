@@ -1,14 +1,12 @@
 package org.example.practice.Review.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.practice.Review.model.Review;
 import org.example.practice.Review.model.ReviewDto;
 import org.example.practice.Review.service.ReviewService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
