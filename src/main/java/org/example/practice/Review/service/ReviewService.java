@@ -18,11 +18,13 @@ public class ReviewService
     private final ReviewRepository reviewRepository;
     private final BookRepository bookRepository;
     
-    public void register(ReviewDto.Register dto,String Title)
+    public void register(ReviewDto.Register dto)
     {
-        Book book = bookRepository.findByTitle(Title);
+        Optional<Book> book = bookRepository.findById(dto.getBookIdx());
+        Book bookReslt = book.get();
         
-        reviewRepository.save(dto.toEntity(book));
+        
+        reviewRepository.save(dto.toEntity(bookReslt));
     }
     
     public List<ReviewDto.reviewRes> list()

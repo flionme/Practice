@@ -9,6 +9,7 @@ public class ReviewDto
     @Getter
     public static class Register
     {
+        private Integer bookIdx;
         private String reviewContents;
         private Integer score;
         

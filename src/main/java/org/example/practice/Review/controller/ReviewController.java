@@ -18,9 +18,9 @@ public class ReviewController
     private final ReviewService reviewService;
     
     @PostMapping("/register")
-    public ResponseEntity register(@RequestBody ReviewDto.Register dto,String title)
+    public ResponseEntity register(@RequestBody ReviewDto.Register dto)
     {
-        reviewService.register(dto,title);
+        reviewService.register(dto);
         
         return ResponseEntity.status(200).body("Success");
     }
